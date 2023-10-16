@@ -1,0 +1,8 @@
+service: () -> {
+    crearDonacion: (principal, principal, nat8) -> (record {usuarioDonador:principal; solicitud:principal; idDonacion:principal; unidades:nat8; fecha:nat64});
+    crearSolicitud: (principal, nat8, nat8, nat8, nat64, nat8) -> (record {tipoSangre:nat8; unidadesAportadas:nat8; fechaCierre:nat64; estatus:nat8; usuarioSolicita:principal; tipoDonacion:nat8; fechaSolicitud:nat64; unidades:nat8; idSolicitud:principal});
+    llenar: () -> ();
+    obtenerDonaciones: () -> (vec record {usuarioDonador:principal; solicitud:principal; idDonacion:principal; unidades:nat8; fecha:nat64}) query;
+    obtenerSolicitudes: () -> (vec record {tipoSangre:nat8; unidadesAportadas:nat8; fechaCierre:nat64; estatus:nat8; usuarioSolicita:principal; tipoDonacion:nat8; fechaSolicitud:nat64; unidades:nat8; idSolicitud:principal}) query;
+    obtenerUsuarios: () -> (vec record {tipoSangre:nat8; apMat:text; apPat:text; nombre:text; idUsuario:principal; sexo:nat8; fechaNacimiento:nat64}) query;
+}

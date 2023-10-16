@@ -1,0 +1,13 @@
+{
+    "canisters": {
+        "donacion_sangre": {
+            "type": "custom",
+            "main": "src/index.ts",
+            "candid": "src/index.did",
+            "build": "npx azle donacion_sangre",
+            "wasm": ".azle/donacion_sangre/donacion_sangre.wasm",
+            "gzip": true
+        }
+    }
+}
+
